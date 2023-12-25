@@ -27,11 +27,11 @@ const Login = () => {
         console.log("logged in");
         // console.log("data: ", data);
       })
+      .then(() => navigate("/homeProtectedRoute"))
 
       .catch((err) => {
         console.log(err);
       });
-    navigate("/homeProtectedRoute");
   };
 
   return (
