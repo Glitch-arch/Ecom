@@ -15,17 +15,17 @@ const Login = () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        username: username,
-        password: password,
+        username: setUsername("kminchelle"),
+        password: setPassword("0lelplR"),
         // expiresInMins: 60, // optional
       }),
     })
       .then((res) => res.json())
       .then((data) => {
         localStorage.setItem("token", data.token);
-        console.log(data.token);
+        // console.log(data.token);
         console.log("logged in");
-        console.log("data: ", data);
+        // console.log("data: ", data);
       })
 
       .catch((err) => {
